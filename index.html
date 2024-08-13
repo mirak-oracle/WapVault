@@ -133,7 +133,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f5f5f5;
+            background: #282c34;
             z-index: 1000; /* Ensure it's above other content */
         }
 
@@ -160,14 +160,12 @@
             <h2 class="text-2xl font-bold mb-4">Set Up Authentication</h2>
             <input type="password" id="setupPin" placeholder="Set your PIN" class="w-full p-2 border border-gray-300 rounded mb-4" />
             <button onclick="setupPIN()" class="bg-blue-500 text-white p-2 rounded w-full mb-4">Set Up PIN</button>
-            <button onclick="authenticateWithFingerprint()" class="bg-green-500 text-white p-2 rounded w-full">Set Up Fingerprint</button>
-        </div>
+             </div>
         <div id="loginSection" class="auth-section bg-white p-8 rounded-lg shadow-lg hidden">
             <h2 class="text-2xl font-bold mb-4">Login</h2>
             <input type="password" id="loginPin" placeholder="Enter PIN" class="w-full p-2 border border-gray-300 rounded mb-4" />
             <button onclick="login()" class="bg-blue-500 text-white p-2 rounded w-full mb-4">Login</button>
-            <button onclick="authenticateWithFingerprint()" class="bg-green-500 text-white p-2 rounded w-full">Login with Fingerprint</button>
-        </div>
+               </div>
         
         <button onclick="clearBiometricData()" class="bg-red-500 text-white p-2 rounded w-full mt-2">Clear Biometric Data</button>
     </div>
@@ -486,13 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('assetFile').click();
         }
 
-        function logout() {
-            sessionStorage.setItem('isAuthenticated', 'false');
-            checkAuth();
-        }
-
-        // Load assets and check authentication on page load
-        window.onload = checkAuth;
+        
     </script>
 </body>
 </html>
